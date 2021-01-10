@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import * as THREE from "three";
+// import * as THREE from "three";
 import { Canvas } from "react-three-fiber";
 import { useSprings, animated } from "react-spring/three";
 import { times } from "lodash";

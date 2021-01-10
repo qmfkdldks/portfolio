@@ -2,13 +2,14 @@ import styled from "styled-components";
 import { down, up, only } from "styled-breakpoints";
 
 export const Container = styled.div`
-  ${down("md")} {
-    padding: 30px;
-  }
+  display: flex;
+  justify-content: flex-end;
+`;
 
-  ${up("lg")} {
-    padding-left: 20vw;
-  }
+export const Background = styled.div`
+  background-color: #f72585;
+  max-width: 576px;
+  margin-left: 100px;
 `;
 
 export const Title = styled.h1`
@@ -28,8 +29,6 @@ export const Title = styled.h1`
   }
 `;
 
-export const Name = styled.h3``;
-
 export const Description = styled.div`
   ${up("md")} {
     font-size: 20px;
@@ -40,4 +39,8 @@ export const Description = styled.div`
   span {
     color: #f72585;
   }
+`;
+
+export const Image = styled.img`
+  max-width: 576px;
 `;

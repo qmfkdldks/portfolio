@@ -1,32 +1,28 @@
 import React from "react";
-import { Container, Background, Title, Description, Image } from "./style";
-// import { useSpring, animated } from "react-spring";
-import { Spring } from "react-spring/renderprops";
-import VisibilitySensor from "react-visibility-sensor";
+import { Background, Title, Description } from "./style";
 
-const Card = () => {
+interface IComponentProps {
+  inverted?: boolean;
+}
+
+const Component = ({ inverted }: IComponentProps) => {
   return (
-    <VisibilitySensor partialVisibility>
-      {({ isVisible }) => (
-        <Spring
-          delay={300}
-          to={{
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateX(0)" : "translateX(200px)",
-          }}
-        >
-          {(props) => (
-            <Container style={{ ...props }}>
-              <Background>
-                <Title>Great Software</Title>
-                <Description>Lorem ipsum</Description>
-              </Background>
-            </Container>
-          )}
-        </Spring>
-      )}
-    </VisibilitySensor>
+    <Background inverted={inverted}>
+      <Title>Great Software</Title>
+      <Description>
+        Software quality assurance is a broader term and the whole process spans
+        the entire life cycle of the development of software, application or
+        program. Below are some of the best practices for 2021, that a quality
+        assurance tester should apply the entire life cycle of the development
+        of software, application or program. Below are some of the best
+        practices for 2021, that a quality assurance tester should apply:
+
+        the entire life cycle of the development of software, application or
+        program. Below are some of the best practices for 2021, that a quality
+        assurance tester should apply:
+      </Description>
+    </Background>
   );
 };
 
-export default Card;
+export default Component;

@@ -1,13 +1,19 @@
 import styled from "styled-components";
 import { down, up, only } from "styled-breakpoints";
 
+export const Root = styled.div`
+  background-color: red;
+  width: 100%;
+  height: 100%;
+`;
+
 export const Container = styled.div`
   ${down("md")} {
     padding: 30px;
   }
 
   ${up("lg")} {
-    padding-left: 20vw;
+    padding-left: "20vw";
   }
 `;
 

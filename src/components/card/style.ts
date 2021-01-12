@@ -1,20 +1,26 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { down, up, only } from "styled-breakpoints";
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
+interface IBackgroundProps {
+  inverted?: boolean;
+}
 
-export const Background = styled.div`
-  background-color: #f72585;
+export const Background = styled.div<IBackgroundProps>`
+  ${(props) =>
+    props.inverted &&
+    css`
+      background-color: #2a9d8f;
+      color: #fff;
+      padding: 15px 30px;
+      /* border-radius: 8px; */
+    `}
+
   max-width: 576px;
-  margin-left: 100px;
+  margin-right: 100px;
 `;
 
 export const Title = styled.h1`
   ${down("md")} {
-    width: 100%;
     font-size: 30px;
   }
 
@@ -23,9 +29,7 @@ export const Title = styled.h1`
   }
 
   ${up("lg")} {
-    font-size: 100px;
-    width: 80vw;
-    max-width: 992px;
+    font-size: 80px;
   }
 `;
 
@@ -39,8 +43,4 @@ export const Description = styled.div`
   span {
     color: #f72585;
   }
-`;
-
-export const Image = styled.img`
-  max-width: 576px;
 `;

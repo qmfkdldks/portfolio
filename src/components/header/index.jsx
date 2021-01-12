@@ -71,7 +71,7 @@ function Lights() {
 
 export default () => {
   return (
-    <Canvas shadowMap camera={{ position: [0, 0, 100], fov: 100 }}>
+    <Canvas shadowMap camera={{ position: [0, 0, 100], fov: 100 }} style={{ position: 'absolute', top: 0 }}>
       <Lights />
       <Content />
     </Canvas>

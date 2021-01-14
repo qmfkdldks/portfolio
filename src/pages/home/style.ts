@@ -19,7 +19,6 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   ${down("md")} {
-    width: 100%;
     font-size: 30px;
   }
 
@@ -29,7 +28,6 @@ export const Title = styled.h1`
 
   ${up("lg")} {
     font-size: 100px;
-    width: 80vw;
     max-width: 992px;
   }
 `;

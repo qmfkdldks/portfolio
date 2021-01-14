@@ -20,9 +20,17 @@ export default function App() {
   const props = useSpring({
     width: "100%",
     height: "100%",
-    backgroundColor: toggle ? "#22231c" : "#fff",
+    backgroundColor: toggle ? "#282922" : "#fff",
     color: toggle ? "#fff" : "black",
   });
+
+  const imgProps = useSpring({
+    width: "100%",
+    height: "100%",
+    backgroundColor: toggle ? "#282922" : "#fff",
+    color: toggle ? "#fff" : "black",
+  });
+
 
   const onChange = useCallback(
     (isVisible: boolean) => {
@@ -52,15 +60,15 @@ export default function App() {
           >
             <Reveal>
               <Name>Brian Kang</Name>
-
-              <Title>Building system to create great quality of services</Title>
-
+              <Title>
+                Building system to create great quality of softwares
+              </Title>
               <Description>
-                I've been worknig as a <strong>Full Stack Engineer</strong>. My
-                goal is building a business system which produces variety of
-                digital products and test business models and hypotheses with
-                less resources. I learn everything necessary to convert idea
-                into reality.
+                <strong>Full Stack Engineer</strong> with more than 3 years of
+                experiences. My goal is building a business system that can
+                reduce amount of time and resources to build great digital
+                products. I learn everything necessary to convert idea into
+                reality.
               </Description>
               <Description>
                 <span>
@@ -72,28 +80,16 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.3}>
-          <Container style={{ paddingLeft: "30px", maxWidth: "1100px" }}>
+          <Container style={{ paddingLeft: "30px" }}>
             <Reveal>
-              <img width="100%" src="https://i.imgur.com/2sOSf9T.png" />
-            </Reveal>
-          </Container>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.3} speed={1}>
-          <Container style={{ paddingLeft: "10px", width: "768px" }}>
-            <Reveal>
-              <img src="https://cdn.lavoz.com.ar/sites/default/files/styles/width_1072/public/nota_periodistica/grido_fabrica_hoy_1601483576.jpg" />
-            </Reveal>
-          </Container>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.7} speed={1}>
-          <Container style={{ display: "flex", justifyContent: "flex-end" }}>
-            <Reveal>
-              <img
-                style={{ maxWidth: "738px" }}
-                src="https://i.imgur.com/ylNvpZB.jpg"
-                alt=""
+              <div
+                style={{
+                  backgroundImage: "url('https://i.imgur.com/wZhu3iw.webp?1')",
+                  maxWidth: "900px",
+                  height: "900px",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                }}
               />
             </Reveal>
           </Container>
@@ -108,23 +104,43 @@ export default function App() {
             }}
           >
             <Reveal>
-              <Card inverted />
+              <Title>Digital Menu</Title>
+              <Description>
+                This course offers a comprehensive overview of the RSpec testing
+                library for the Ruby programming library. RSpec is the most
+                popular Ruby Gem of all time, with over 300 million downloads to
+                date. If you're new to the topic, testing is the practice of
+                "writing code that confirms that other code works as expected".
+                Tests control for regressions, which are changes to the code
+                that break the program.
+              </Description>
             </Reveal>
           </Container>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2} speed={0}>
-          <VisibilitySensor onChange={onChange}>
-            <Container
-              style={{
-                paddingRight: "10px",
-                display: "flex",
-                justifyContent: "flex-end",
-                // background: "red",
-              }}
-            >
-              <Reveal delay={0}>
-                <Title>Unit Test</Title>
+        <ParallaxLayer offset={1.9} speed={1}>
+          {/* <Container style={{ display: "flex", justifyContent: "flex-end" }}>
+              <Reveal>
+                <img
+                src="https://i.imgur.com/ylNvpZB.webp"
+                alt=""
+              /> 
+              </Reveal>
+            </Container> */}
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={1.8} speed={-0.2}>
+          <Container
+            style={{
+              paddingRight: "10px",
+              display: "flex",
+              justifyContent: "flex-end",
+              // background: "red",
+            }}
+          >
+            <Reveal>
+              <Title>Unit Test</Title>
+              <VisibilitySensor onChange={onChange}>
                 <Description>
                   This course offers a comprehensive overview of the RSpec
                   testing library for the Ruby programming library. RSpec is the
@@ -134,15 +150,21 @@ export default function App() {
                   as expected". Tests control for regressions, which are changes
                   to the code that break the program.
                 </Description>
-              </Reveal>
-            </Container>
-          </VisibilitySensor>
+              </VisibilitySensor>
+            </Reveal>
+          </Container>
         </ParallaxLayer>
 
         <ParallaxLayer offset={2.1} speed={0}>
-          <Reveal delay={1000}>
-            <img src="https://i.imgur.com/GumxjU1.png" alt="" />
-          </Reveal>
+          {toggle && (
+            <Reveal>
+              <animated.img
+                style={{ maxWidth: "587px" }}
+                src="https://i.imgur.com/GumxjU1.webp"
+                alt=""
+              />
+            </Reveal>
+          )}
         </ParallaxLayer>
       </Parallax>
     </animated.div>

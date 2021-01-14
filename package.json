@@ -11,6 +11,7 @@
   "dependencies": {
     "lodash": "4.17.20",
     "react": "17.0.0",
+    "react-code-blocks": "0.0.8",
     "react-dom": "17.0.0",
     "react-responsive": "^8.2.0",
     "react-scripts": "^4.0.1",

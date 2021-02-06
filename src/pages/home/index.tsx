@@ -1,173 +1,104 @@
 import ReactDOM from "react-dom";
 import React, { useState, useCallback, useRef } from "react";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
-import { Root, Container, Title, Name, Description } from "./style";
-import { useMediaQuery } from "react-responsive";
+import { Container, Description, Image } from "./style";
 import Header from "../../components/header";
-import Card from "../../components/card";
 import Reveal from "../../components/reveal";
-import { useTransition, useSpring, animated } from "react-spring";
-import VisibilitySensor from "react-visibility-sensor";
+import Example from "../../layers/example";
+import { useMediaQuery } from "react-responsive";
+import Iseatz from "../../layers/iseatz";
+import System from "../../layers/system";
+import Proveat from "../../layers/proveat";
+import Code from "../../layers/code";
+import Slice from "../../layers/slice";
 
 export default function App() {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: "(min-device-width: 1224px)",
-  });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const parallax = useRef<Parallax>(null);
 
   const [toggle, setToggle] = useState(false);
-  const props = useSpring({
-    width: "100%",
-    height: "100%",
-    backgroundColor: toggle ? "#282922" : "#fff",
-    color: toggle ? "#fff" : "black",
-  });
-
-  const imgProps = useSpring({
-    width: "100%",
-    height: "100%",
-    backgroundColor: toggle ? "#282922" : "#fff",
-    color: toggle ? "#fff" : "black",
-  });
-
 
   const onChange = useCallback(
     (isVisible: boolean) => {
-      console.log("onChange");
       setToggle(isVisible);
     },
     [setToggle]
   );
 
   return (
-    <animated.div style={props}>
-      <Parallax ref={parallax} pages={3}>
-        <ParallaxLayer offset={0} speed={-0.2}>
-          {isDesktopOrLaptop && <Header />}
+    <div
+      style={{
+        width: "100%",
+        height: "100vh",
+        backgroundColor: toggle ? "#282c34" : "transparent",
+        transition: "all 0.5s ease",
+        color: toggle ? "#fff" : "black",
+      }}
+    >
+      <Parallax ref={parallax} pages={5}>
+        <ParallaxLayer offset={0} speed={isTabletOrMobile ? 0 : 1}>
+          {!isTabletOrMobile && <Header />}
         </ParallaxLayer>
 
-        <ParallaxLayer offset={0} speed={-0.2}>
-          <Container
-            onClick={() => {
-              parallax.current?.scrollTo(1);
-            }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              paddingLeft: "20vw",
-            }}
-          >
+        <System offset={0} speed={-0.1} />
+
+        <ParallaxLayer offset={isTabletOrMobile ? 0.8 : 1}>
+          <Container>
             <Reveal>
-              <Name>Brian Kang</Name>
-              <Title>
-                Building system to create great quality of softwares
-              </Title>
-              <Description>
-                <strong>Full Stack Engineer</strong> with more than 3 years of
-                experiences. My goal is building a business system that can
-                reduce amount of time and resources to build great digital
-                products. I learn everything necessary to convert idea into
-                reality.
-              </Description>
-              <Description>
-                <span>
-                  Ruby On Rails, React.js, Elixir, Node, GraphQL, Docker
-                </span>
-              </Description>
+              {/* backgroundImage: "url('https://i.imgur.com/wZhu3iw.webp?1')", */}
+              <Image src="https://cdn.dribbble.com/users/4979509/screenshots/15068234/media/fc57ec3e852bc69d1b8956a22826c840.png?compress=1&resize=1000x750" />
             </Reveal>
           </Container>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0.3}>
-          <Container style={{ paddingLeft: "30px" }}>
-            <Reveal>
-              <div
-                style={{
-                  backgroundImage: "url('https://i.imgur.com/wZhu3iw.webp?1')",
-                  maxWidth: "900px",
-                  height: "900px",
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                }}
-              />
-            </Reveal>
-          </Container>
-        </ParallaxLayer>
+        <Proveat
+          offset={isTabletOrMobile ? 1.3 : 1}
+          speed={isTabletOrMobile ? 0 : 0.5}
+        />
 
-        <ParallaxLayer offset={1} speed={1}>
-          <Container
-            style={{
-              paddingRight: "10vw",
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
-          >
+        <ParallaxLayer offset={1.7} speed={isTabletOrMobile ? 0 : 1}>
+          <Container inverted>
             <Reveal>
-              <Title>Digital Menu</Title>
+              <Image src="https://imgur.com/eSz6INq.jpg" alt="" />
               <Description>
-                This course offers a comprehensive overview of the RSpec testing
-                library for the Ruby programming library. RSpec is the most
-                popular Ruby Gem of all time, with over 300 million downloads to
-                date. If you're new to the topic, testing is the practice of
-                "writing code that confirms that other code works as expected".
-                Tests control for regressions, which are changes to the code
-                that break the program.
+                <strong>
+                  15 out of 2000 startup teams #Incubate Goverment Incubation
+                  Program
+                </strong>
               </Description>
             </Reveal>
           </Container>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.9} speed={1}>
-          {/* <Container style={{ display: "flex", justifyContent: "flex-end" }}>
-              <Reveal>
-                <img
-                src="https://i.imgur.com/ylNvpZB.webp"
-                alt=""
-              /> 
-              </Reveal>
-            </Container> */}
-        </ParallaxLayer>
+        <Code offset={2} speed={0} onChange={onChange} />
 
-        <ParallaxLayer offset={1.8} speed={-0.2}>
-          <Container
-            style={{
-              paddingRight: "10px",
-              display: "flex",
-              justifyContent: "flex-end",
-              // background: "red",
-            }}
-          >
+        <Example
+          toggle={toggle}
+          offset={isTabletOrMobile ? 2.3 : 2}
+          speed={0}
+        />
+
+        <ParallaxLayer offset={isTabletOrMobile ? 3 : 3}>
+          <Container>
             <Reveal>
-              <Title>Unit Test</Title>
-              <VisibilitySensor onChange={onChange}>
-                <Description>
-                  This course offers a comprehensive overview of the RSpec
-                  testing library for the Ruby programming library. RSpec is the
-                  most popular Ruby Gem of all time, with over 300 million
-                  downloads to date. If you're new to the topic, testing is the
-                  practice of "writing code that confirms that other code works
-                  as expected". Tests control for regressions, which are changes
-                  to the code that break the program.
-                </Description>
-              </VisibilitySensor>
+              <Image src="https://images.pexels.com/photos/4457110/pexels-photo-4457110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=550&w=700" />
             </Reveal>
           </Container>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2.1} speed={0}>
-          {toggle && (
-            <Reveal>
-              <animated.img
-                style={{ maxWidth: "587px" }}
-                src="https://i.imgur.com/GumxjU1.webp"
-                alt=""
-              />
-            </Reveal>
-          )}
+        <Slice offset={isTabletOrMobile ? 3.3 : 3} speed={0} />
+
+        <ParallaxLayer offset={4.7}>
+          <Container inverted>
+            <Image src="https://cdn.dribbble.com/users/1644453/screenshots/14147996/media/310afd5b7d4c1d82cb8b4823fc10ec11.png?compress=1&resize=1000x750" />
+            <Image src="https://cdn.dribbble.com/users/3963627/screenshots/15062023/media/216b952e2beea939e393c5d12866a2c1.png?compress=1&resize=1000x750" />
+          </Container>
         </ParallaxLayer>
+
+        <Iseatz offset={4} speed={0} />
       </Parallax>
-    </animated.div>
+    </div>
   );
 }
 

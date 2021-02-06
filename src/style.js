@@ -1,3 +1,7 @@
+
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
 }
@@ -19,10 +23,11 @@ body,
 }
 
 body {
-  position: fixed;
+  position: relative;
   overflow: hidden;
   overscroll-behavior-y: none;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: black;
   -webkit-font-smoothing: antialiased;
 }
+`;

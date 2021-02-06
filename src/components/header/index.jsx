@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-// import * as THREE from "three";
 import { Canvas } from "react-three-fiber";
 import { useSprings, animated } from "react-spring/three";
 import { times } from "lodash";
 
-const PARTICLES_NUMBER = 20;
+const PARTICLES_NUMBER = 17;
 const COLORS = ["#cdb4db", "#ffc8dd", "#ffafcc", "#bde0fe", "#a2d2ff"];
 
 const random = (i) => {
@@ -13,7 +12,6 @@ const random = (i) => {
     position: [100 - Math.random() * 200, 100 - Math.random() * 200, i * 1.5],
     color: COLORS[Math.round(Math.random() * (COLORS.length - 1))],
     scale: [1 + r * 14, 1 + r * 14, 1],
-    // rotation: [0, 0, THREE.Math.degToRad(Math.round(Math.random()) * 45)],
   };
 };
 
@@ -71,7 +69,13 @@ function Lights() {
 
 export default () => {
   return (
-    <Canvas shadowMap camera={{ position: [0, 0, 100], fov: 100 }} style={{ position: 'absolute', top: 0 }}>
+    <Canvas
+      gl={{ antialias: false, alpha: false }}
+      onCreated={({ gl }) => gl.setClearColor("white")}
+      shadowMap
+      camera={{ position: [0, 0, 100], fov: 100 }}
+      style={{ position: "absolute", top: 0 }}
+    >
       <Lights />
       <Content />
     </Canvas>

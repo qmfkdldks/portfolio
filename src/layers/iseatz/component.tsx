@@ -1,19 +1,22 @@
 import React from "react";
-import { Container, Title, Description } from "./style";
 import Reveal from "../../components/reveal";
+import { Container } from "./style";
+import Title from "../../components/title";
+import Description from "../../components/description";
 
 const Iseatz = () => {
   return (
     <>
-      <Container inverted>
-        <Title>Section to start the story of this design portfolio</Title>
+      <Container>
+        <Title>Do you want to build successful digital product?</Title>
         <Reveal>
           <Description>
-            One of the best delivery app in United States. This course offers a
+            Please contact me. This course offers a
             comprehensive overview of the RSpec testing library for the Ruby
             programming library. RSpec is the most popular Ruby Gem of all time,
             with over 300 million downloads to date. If you're new to the topic,
             testing is the practice of "writing code.
+            qmfkdldks@gmail.com
           </Description>
         </Reveal>
       </Container>

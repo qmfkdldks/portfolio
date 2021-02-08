@@ -1,7 +1,9 @@
 import React from "react";
-import { Title, Description, Image } from "./style";
+import { Image } from "./style";
 import Container from "../../components/container";
 import Reveal from "../../components/reveal";
+import Title from "../../components/title";
+import Description from "../../components/description";
 
 const Slice = () => {
   return (
@@ -10,12 +12,19 @@ const Slice = () => {
         <Reveal>
           <Title>Working with one of the best delivery team in US</Title>
           <Description>
-            This course offers a comprehensive overview of the RSpec testing
-            library for the Ruby programming library. RSpec is the most popular
-            Ruby Gem of all time, with over 300 million downloads to date. If
-            you're new to the topic, testing is the practice of "writing code
-            that confirms that other code works as expected". Tests control for
-            regressions, which are changes to the code that break the program.
+            Integrated text review platform and managed over 8M of reviews. Have
+            increased search engine performance by 268%. Team has grown from 3
+            to over 10 engineers. I have also launched server side rendered
+            react app using express framework. And integrated CMS into the
+            project to help marketing team move faster. And accomplished to
+            generate over +7000 dynamic pages which can be modifed without
+            engineers works. Participated in early phase of the new feature.
+            This is where I could learn to work wit agile metodology and
+            accomplish startup goals.
+            <p>
+              Ruby On Rails, Microservices, Typescript, React.js, Redux,
+              Express, Gitlab CI/CD
+            </p>
           </Description>
         </Reveal>
       </Container>

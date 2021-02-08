@@ -1,6 +1,7 @@
 import React from "react";
-import { Title, Description } from "./style";
 import Container from "../../components/container";
+import Title from "../../components/title";
+import Description from "../../components/description";
 import Reveal from "../../components/reveal";
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -12,13 +13,17 @@ const System = ({ onChange }: { onChange: any }) => {
           <Title>How do I write code</Title>
           <VisibilitySensor onChange={onChange} partialVisibility={true}>
             <Description>
-              This course offers a comprehensive overview of the RSpec testing
-              library for the Ruby programming library. RSpec is the most
-              popular Ruby Gem of all time, with over 300 million downloads to
-              date. If you're new to the topic, testing is the practice of
-              "writing code that confirms that other code works as expected".
-              Tests control for regressions, which are changes to the code that
-              break the program.
+              Havily inspired by Functional Programming and Object Oriented
+              Proramming. I always learn new software techniques to come up with
+              simplest and creative solution. I understand that having test
+              coverage and well written documentation is critical. I learn new
+              technologies not only from books and aritcles but also building
+              new services and tirals and errors. That is why I love to create
+              side projects.
+              <p>
+                I have experience with: Elixir, React Native, Circle CI/CD,
+                GraphQL, Next.js, AWS, Svelte
+              </p>
             </Description>
           </VisibilitySensor>
         </Reveal>

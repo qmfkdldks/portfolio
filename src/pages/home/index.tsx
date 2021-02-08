@@ -1,7 +1,8 @@
 import ReactDOM from "react-dom";
 import React, { useState, useCallback, useRef } from "react";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
-import { Container, Description, Image } from "./style";
+import { Image } from "./style";
+import Container from "../../components/container";
 import Header from "../../components/header";
 import Reveal from "../../components/reveal";
 import Example from "../../layers/example";
@@ -61,12 +62,12 @@ export default function App() {
           <Container inverted>
             <Reveal>
               <Image src="https://imgur.com/eSz6INq.jpg" alt="" />
-              <Description>
+              <p>
                 <strong>
-                  15 out of 2000 startup teams #Incubate Goverment Incubation
-                  Program
+                  15 out of +2000 startup teams #Incubate Goverment Incubation
+                  Program.
                 </strong>
-              </Description>
+              </p>
             </Reveal>
           </Container>
         </ParallaxLayer>
@@ -76,10 +77,10 @@ export default function App() {
         <Example
           toggle={toggle}
           offset={isTabletOrMobile ? 2.3 : 2}
-          speed={0}
+          speed={0.5}
         />
 
-        <ParallaxLayer offset={isTabletOrMobile ? 3 : 3}>
+        <ParallaxLayer offset={isTabletOrMobile ? 3 : 3} speed={0.3}>
           <Container>
             <Reveal>
               <Image src="https://images.pexels.com/photos/4457110/pexels-photo-4457110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=550&w=700" />
@@ -89,14 +90,14 @@ export default function App() {
 
         <Slice offset={isTabletOrMobile ? 3.3 : 3} speed={0} />
 
-        <ParallaxLayer offset={4.7}>
+        <ParallaxLayer offset={4.7} speed={1}>
           <Container inverted>
             <Image src="https://cdn.dribbble.com/users/1644453/screenshots/14147996/media/310afd5b7d4c1d82cb8b4823fc10ec11.png?compress=1&resize=1000x750" />
             <Image src="https://cdn.dribbble.com/users/3963627/screenshots/15062023/media/216b952e2beea939e393c5d12866a2c1.png?compress=1&resize=1000x750" />
           </Container>
         </ParallaxLayer>
 
-        <Iseatz offset={4} speed={0} />
+        <Iseatz offset={4} speed={0.6} />
       </Parallax>
     </div>
   );

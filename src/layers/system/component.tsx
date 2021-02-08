@@ -15,10 +15,9 @@ const System = () => {
           <Name>Brian Kang</Name>
           <Title>Building system to create great quality of softwares</Title>
           <Description>
-            <strong>Senior Full Stack Engineer</strong> with more than 3 years
+            <strong>Senior Full Stack Engineer</strong> with more than +3 years
             of experiences. My goal is building a business system that can
             reduce amount of time and resources to build great digital products.
-            I learn everything necessary to convert idea into reality.
           </Description>
           <Description>
             <span>

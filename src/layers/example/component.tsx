@@ -37,7 +37,8 @@ import React from "react";
  * @param  {inner content of the element} children
  * @param  {object which represents actual html element} element}
  * 
- * @return element component given element.type. if no element type found, it returns plain paragraph element.
+ * @return element component given element.type. if no element type found,
+ * it returns plain paragraph element.
  * 
  * @test
  * it should evaluate element type and render corresponding element

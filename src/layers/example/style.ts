@@ -2,18 +2,19 @@ import styled from "styled-components";
 import { up } from "styled-breakpoints";
 
 export const Container = styled.div`
-  font-size: 13px;
+  font-size: 10px;
   height: 400px;
   overflow-y: auto;
+  display: flex;
+  justify-content: center;
 
   ${up("md")} {
-    font-size: 18px;
-    height: auto;
+    justify-content: flex-end;
   }
 
   ${up("lg")} {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: "7vw";
+    height: auto;
+    font-size: 14px;
+    margin-right: 10vw;
   }
 `;

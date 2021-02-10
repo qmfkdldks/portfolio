@@ -48,7 +48,7 @@ export default function App() {
           <Container>
             <Reveal>
               {/* backgroundImage: "url('https://i.imgur.com/wZhu3iw.webp?1')", */}
-              <Image src="https://cdn.dribbble.com/users/4979509/screenshots/15068234/media/fc57ec3e852bc69d1b8956a22826c840.png?compress=1&resize=1000x750" />
+              <Image src="https://i.imgur.com/wZhu3iw.webp" />
             </Reveal>
           </Container>
         </ParallaxLayer>
@@ -92,7 +92,7 @@ export default function App() {
 
         <ParallaxLayer offset={4.7} speed={1}>
           <Container inverted>
-            <Image src="https://cdn.dribbble.com/users/1644453/screenshots/14147996/media/310afd5b7d4c1d82cb8b4823fc10ec11.png?compress=1&resize=1000x750" />
+            <Image src="https://cdn.dribbble.com/users/235909/screenshots/14259885/media/0449b2e1bd2ed16daf3fcd669b1d6f19.png?compress=1&resize=1000x750" />
             <Image src="https://cdn.dribbble.com/users/3963627/screenshots/15062023/media/216b952e2beea939e393c5d12866a2c1.png?compress=1&resize=1000x750" />
           </Container>
         </ParallaxLayer>

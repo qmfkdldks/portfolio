@@ -19,7 +19,7 @@ const System = () => {
             Program in 2018. It was a huge experience because I had to design
             features, make hyphotesis and reach to client to see the result in
             the market.
-            <span>Ruby On Rails, React.js, Heroku</span>
+            <p>Ruby On Rails, React.js, Heroku, Mobx</p>
           </Description>
         </Reveal>
       </Container>

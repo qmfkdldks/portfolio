@@ -1,7 +1,6 @@
 import React from "react";
-import { Title, Name, Description } from "./style";
+import { Container, Title, Name, Description } from "./style";
 import Reveal from "../../components/reveal";
-import Container from "../../components/container";
 
 const System = () => {
   return (

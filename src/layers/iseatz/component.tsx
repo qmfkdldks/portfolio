@@ -11,13 +11,10 @@ const Iseatz = () => {
         <Title>Do you want to build successful digital product?</Title>
         <Reveal>
           <Description>
-            Please contact me. This course offers a
-            comprehensive overview of the RSpec testing library for the Ruby
-            programming library. RSpec is the most popular Ruby Gem of all time,
-            with over 300 million downloads to date. If you're new to the topic,
-            testing is the practice of "writing code.
-            qmfkdldks@gmail.com
+            If you are interested in making MVP or digital product.
+            Please contact me. I wll respond you within 2 days.
           </Description>
+          <a href="https://www.linkedin.com/in/brian-kang-56ab51b1">Linkedin</a>
         </Reveal>
       </Container>
     </>

@@ -21,8 +21,8 @@ const System = ({ onChange }: { onChange: any }) => {
               new services and tirals and errors. That is why I love to create
               side projects.
               <p>
-                I have experience with: Elixir, React Native, Circle CI/CD,
-                GraphQL, Next.js, AWS, Svelte
+                Elixir, React Native, Circle CI/CD, GraphQL, Next.js, AWS,
+                Svelte
               </p>
             </Description>
           </VisibilitySensor>

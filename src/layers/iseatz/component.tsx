@@ -11,10 +11,17 @@ const Iseatz = () => {
         <Title>Do you want to build successful digital product?</Title>
         <Reveal>
           <Description>
-            If you are interested in making MVP or digital product.
-            Please contact me. I wll respond you within 2 days.
+            If you are interested in creating digital product with well
+            organized code. Please contact me. I wll respond you within 2 days.
           </Description>
-          <a href="https://www.linkedin.com/in/brian-kang-56ab51b1">Linkedin</a>
+          <p>
+            <a href="https://www.linkedin.com/in/brian-kang-56ab51b1">
+              Linkedin
+            </a>
+          </p>
+          <p>
+            <a href="mailto: qmfkdldks@gmail.com">qmfkdldks@gmail.com</a>
+          </p>
         </Reveal>
       </Container>
     </>

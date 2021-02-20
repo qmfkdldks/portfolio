@@ -1,5 +1,5 @@
 import React from "react";
-import { CodeBlock, github, atomOneDark } from "react-code-blocks";
+import { CodeBlock, atomOneDark } from "react-code-blocks";
 import Reveal from "../../components/reveal";
 import { Container } from "./style";
 
@@ -9,18 +9,18 @@ interface IComponentProps {
 
 const Example = ({ toggle }: IComponentProps) => {
   return (
-    <Container>
-      {toggle && (
-        <Reveal delay={1000}>
+    <Reveal delay={1000}>
+      <Container>
+        {toggle && (
           <CodeBlock
             text={REACT_CODE}
             language={"javascript"}
             theme={atomOneDark}
             showLineNumbers={false}
           />
-        </Reveal>
-      )}
-    </Container>
+        )}
+      </Container>
+    </Reveal>
   );
 };
 

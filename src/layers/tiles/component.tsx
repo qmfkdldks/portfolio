@@ -7,7 +7,7 @@ const Pizza = () => {
     <>
       <Container inverted>
         <Image src="https://cdn.dribbble.com/users/235909/screenshots/14259885/media/0449b2e1bd2ed16daf3fcd669b1d6f19.png?compress=1&resize=1000x750" />
-        <Image src="https://cdn.dribbble.com/users/3963627/screenshots/15062023/media/216b952e2beea939e393c5d12866a2c1.png?compress=1&resize=1000x750" />
+        <Image src="https://res.cloudinary.com/dnaexfddx/image/upload/c_fill,f_auto,h_750,q_auto:best,w_1000/v1629513141/proveat/mock_up_puple.jpg" />
       </Container>
     </>
   );

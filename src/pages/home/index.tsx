@@ -13,6 +13,7 @@ import Incubate from "../../layers/incubate";
 import Demo from "../../layers/demo";
 import Pizza from "../../layers/pizza";
 import Tiles from "../../layers/tiles";
+import ComponentList from "../../layers/component-list";
 
 export default function App() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -41,6 +42,12 @@ export default function App() {
       <Parallax ref={parallax} pages={5}>
         <Header
           offset={0}
+          speed={isTabletOrMobile ? 0 : 1}
+          isTabletOrMobile={isTabletOrMobile}
+        />
+
+        <ComponentList
+          offset={isTabletOrMobile ? 0.1 : 0.1}
           speed={isTabletOrMobile ? 0 : 1}
           isTabletOrMobile={isTabletOrMobile}
         />

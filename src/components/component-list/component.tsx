@@ -1,16 +1,28 @@
 import React from "react";
-import Card from "../../components/card";
+import Card from "../card";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
-import Container from "../../components/container";
+import Container from "../container";
+import { up } from "styled-breakpoints";
 
-const List = styled.ul`
+const List = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
+  width: 100%;
 
+  background-color: red;
   > div {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+    margin-right: 15px;
+  }
+
+  ${up("lg")} {
+    flex-direction: column;
+
+    > div {
+      margin-right: 0px;
+      margin-bottom: 15px;
+    }
   }
 `;
 

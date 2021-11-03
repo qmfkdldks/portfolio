@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { up, between } from "styled-breakpoints";
+import { up } from "styled-breakpoints";
 import TitleComponent from "../../components/title";
 
 export const Container = styled.div`
@@ -7,6 +7,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 
   ${up("md")} {
     padding: none;

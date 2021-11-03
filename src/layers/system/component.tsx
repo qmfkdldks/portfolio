@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Title, Name, Description } from "./style";
+import ComponentList from "../../components/component-list";
 import Reveal from "../../components/reveal";
 
 const System = () => {
@@ -23,6 +24,10 @@ const System = () => {
               Ruby On Rails, React.js, Typescript, Elixir, Node, GraphQL, Docker
             </span>
           </Description>
+        </Reveal>
+
+        <Reveal>
+          <ComponentList />
         </Reveal>
       </Container>
     </>

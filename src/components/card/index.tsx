@@ -15,7 +15,7 @@ const Card = ({ title, description, imgSrc }: IComponentProps) => {
     <Container imgSrc={imgSrc || IMG}>
       <Shadow>
         <Title>Like Button</Title>
-        <Description>#React #Typescript</Description>
+        <Description>{description}</Description>
       </Shadow>
     </Container>
   );

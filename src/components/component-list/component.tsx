@@ -12,8 +12,8 @@ const Layer = () => {
     <Container inverted>
       <List>
         <Card />
-        <Card />
-        <Card />
+        <Card imgSrc="https://cdn.dribbble.com/users/821812/screenshots/16097562/media/6f2810a2a5b4c4db08b3d42f944cc28c.png?compress=1&resize=230x230" />
+        <Card imgSrc="https://i.imgur.com/JTvugNV.png?compress=1&resize=230x230" title="Like Button" description="#Like #Svelte" />
       </List>
     </Container>
   );

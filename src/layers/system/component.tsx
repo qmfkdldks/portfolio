@@ -6,11 +6,7 @@ import Reveal from "../../components/reveal";
 const System = () => {
   return (
     <>
-      <Container
-      // onClick={() => {
-      //   parallax.current?.scrollTo(1);
-      // }}
-      >
+      <Container>
         <Reveal>
           <Name>Brian Kang</Name>
           <Title>Building system to create great quality of softwares</Title>

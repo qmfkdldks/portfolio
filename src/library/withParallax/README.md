@@ -1,7 +1,10 @@
-## React component example:
+Nine months since the launch of our first commercial product, the OpenAI API, more than 300 applications are now using GPT-3, and tens of thousands of developers around the globe are building on our platform. We currently generate an average of 4.5 billion words per day, and continue to scale production traffic.
 
-```
-<Button size="large">Push Me</Button>
+```js
+import withParallax from "../../components/withParallax";
+import Component from "./component";
+
+export default withParallax(Component);
 ```
 
 You can add a custom props to an example wrapper:

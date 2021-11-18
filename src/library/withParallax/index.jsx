@@ -1,11 +1,6 @@
 import React from "react";
 import { ParallaxLayer } from "react-spring/renderprops-addons";
 
-/**
- * 
- * 
- * 
- */
 const withParallax = (WrappedComponent) => {
   return ({ offset, speed, isTabletOrMobile, ...rest }) => {
     if (isTabletOrMobile) {

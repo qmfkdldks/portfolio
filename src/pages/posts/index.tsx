@@ -15,7 +15,7 @@ import Pizza from "../../layers/pizza";
 import Tiles from "../../layers/tiles";
 import Sidebar from "../../components/sidebar";
 
-export default function Home() {
+export default function Posts() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const parallax = useRef<Parallax>(null);

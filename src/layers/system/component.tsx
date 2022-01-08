@@ -11,7 +11,6 @@ const System = () => {
       // }}
       >
         <Reveal>
-          <Name>Brian Kang</Name>
           <Title>Building system to create great quality of softwares</Title>
           <Description>
             <strong>Senior Full Stack Engineer</strong> with more than +3 years

@@ -30,4 +30,8 @@ body {
   color: black;
   -webkit-font-smoothing: antialiased;
 }
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
 `;

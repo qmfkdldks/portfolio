@@ -1,11 +1,5 @@
 import ReactDOM from "react-dom";
-import React, { useState, useCallback, useRef } from "react";
-import { Parallax } from "react-spring/renderprops-addons";
-// import { useMediaQuery } from "react-responsive";
-// import Code from "../../layers/code";
-import Slice from "../../layers/slice";
-import Pizza from "../../layers/pizza";
-import AppMarkdown from "../../library/withParallax/README.md";
+import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -14,8 +8,6 @@ import styled from "styled-components";
 const Layer = styled.div`
   display: flex;
   justify-content: space-around;
-
-  background-color: #eeedee;
 `;
 
 const Header = styled.div`
@@ -43,17 +35,22 @@ const Image = styled.img`
 `;
 
 export default function PostPage() {
-  const [markdown, setSource] = React.useState("");
+  const [markdown, setMarkdown] = React.useState("");
+  const [meta, setMeta] = React.useState({});
 
   React.useEffect(() => {
-    fetch(AppMarkdown)
+    fetch("library/withParallax/README.md")
       .then((res) => res.text())
-      .then((text) => setSource(text));
+      .then((text) => setMarkdown(text));
+
+    fetch("library/withParallax/README.md")
+      .then((res) => res.text())
+      .then((json) => setMeta(json));
   }, []);
 
   return (
     <>
-      <Header>DONT REPEAT STUDIO</Header>
+      <Header>VISIBLE IDEA</Header>
       <Layer>
         <Image src="https://cdn.dribbble.com/users/758070/screenshots/13992732/media/e23d80f147270b7a99d262c6b3a82bcc.png?compress=1&resize=600x900" />
         <Column>

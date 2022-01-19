@@ -21,10 +21,10 @@ const Slice = () => {
             engineers works. Participated in early phase of the new feature.
             This is where I could learn to work wit agile metodology and
             accomplish startup goals.
-            <p>
+            <span>
               Ruby On Rails, Microservices, Typescript, React.js, Redux,
               Express, Gitlab CI/CD
-            </p>
+            </span>
           </Description>
         </Reveal>
       </Container>

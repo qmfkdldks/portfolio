@@ -20,10 +20,10 @@ const System = ({ onChange }: { onChange: any }) => {
               technologies not only from books and aritcles but also building
               new services and tirals and errors. That is why I love to create
               side projects.
-              <p>
+              <span>
                 Elixir, React Native, Circle CI/CD, GraphQL, Next.js, AWS,
                 Svelte
-              </p>
+              </span>
             </Description>
           </VisibilitySensor>
         </Reveal>

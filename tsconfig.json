@@ -1,6 +1,5 @@
 {
   "include": ["./src/**/*"],
-  "exclude": ["./src/library/**/*"],
   "compilerOptions": {
     "strict": true,
     "esModuleInterop": true,

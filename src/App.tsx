@@ -22,7 +22,7 @@ function App(): JSX.Element {
             <Route path="/" element={<Home/>} />
             <Route path="/posts" element={<Posts/>} />
           </Routes>
-        </BrowserRouter>
+      </BrowserRouter>
     </ThemeProvider>
     </>
   );

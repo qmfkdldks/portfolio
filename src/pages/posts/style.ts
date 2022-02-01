@@ -1,38 +1,56 @@
 import styled from "styled-components";
-import { up, between } from "styled-breakpoints";
+import {down, up, between } from "styled-breakpoints";
 
-export const Root = styled.div`
-  width: 100%;
-  height: 100%;
-`;
-
-interface IContainerProps {
-  inverted?: boolean;
-}
-
-export const Container = styled.div<IContainerProps>`
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  ${up("lg")} {
-    padding: none;
-    justify-content: ${(props) => (props.inverted ? "flex-end" : "flex-start")};
-    margin-right: ${(props) => (props.inverted ? "7vw" : "0")};
-    margin-left: ${(props) => (props.inverted ? "0" : "7vw")};
+export const Container = styled.div`
+  padding: 20px 15px 0;
+  ${up("md")} {
+    padding: 60px 50px 0;
   }
 `;
 
-export const Image = styled.img`
+export const Header = styled.h1`
+  font-size: 45px;
+  margin-bottom: 0px;
+`;
+
+export const YearContainer = styled.div`
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #e8e8e9;
+  margin-top: 60px;
+  
+  ${up("md")} {
+    display: flex;
+  }
+`;
+
+export const LeftContainer = styled.div`
+  color: #19192780;
+  font-size: 20px;
+  width: 50%;
+  margin-bottom: 10px;
+`;
+
+export const RightContainer = styled.div`
   width: 100%;
 
   ${up("md")} {
-    max-width: 470px;
-  }
-
-  ${up("lg")} {
-    object-fit: cover;
-    max-width: 1000px;
+    width: 50%;
+    padding: 0 14px;
   }
 `;
+
+export const Post = styled.div`
+  font-size: 17px;
+  color: #191927cf;
+  margin-bottom: 40px;
+
+a {
+  text-decoration: none;
+}
+`;
+
+export const PostTitle = styled.div`
+  font-weight: bold;
+  margin-bottom: 3px;
+`

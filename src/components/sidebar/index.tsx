@@ -19,7 +19,7 @@ const Sidebar: React.FunctionComponent = () => {
   const [openDropdown, setOpenDropDown, containerRef] = useDropdown();
 
   const isDesktop = useBreakpoint(up("md"));
-  console.log({ isDesktop });
+  
   return (
     <Container>
       <Left id="left-navbar-items">

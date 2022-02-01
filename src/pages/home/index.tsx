@@ -40,11 +40,6 @@ export default function Home() {
       }}
     >
       <Parallax ref={parallax} pages={5}>
-        <Header
-          offset={0}
-          speed={isTabletOrMobile ? 0 : 1}
-          isTabletOrMobile={isTabletOrMobile}
-        />
 
         <Sidebar /> 
 

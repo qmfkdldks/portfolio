@@ -13,8 +13,9 @@ import Incubate from "../../layers/incubate";
 import Demo from "../../layers/demo";
 import Pizza from "../../layers/pizza";
 import Tiles from "../../layers/tiles";
+import Sidebar from "../../components/sidebar";
 
-export default function App() {
+export default function Home() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const parallax = useRef<Parallax>(null);
@@ -39,11 +40,8 @@ export default function App() {
       }}
     >
       <Parallax ref={parallax} pages={5}>
-        <Header
-          offset={0}
-          speed={isTabletOrMobile ? 0 : 1}
-          isTabletOrMobile={isTabletOrMobile}
-        />
+
+        <Sidebar /> 
 
         <System offset={0} speed={-0.1} isTabletOrMobile={isTabletOrMobile} />
 
@@ -98,5 +96,3 @@ export default function App() {
     </div>
   );
 }
-
-ReactDOM.render(<App />, document.getElementById("root"));

@@ -19,15 +19,16 @@ body,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  overflow: hidden;
 }
 
 body {
   position: relative;
-  overflow: hidden;
-  overscroll-behavior-y: none;
   font-family: 'Raleway', sans-serif;
   color: black;
   -webkit-font-smoothing: antialiased;
 }
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
 `;
